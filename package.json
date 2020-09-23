@@ -12,7 +12,7 @@
     "module_name": "mapnik",
     "module_path": "./lib/binding/{node_napi_label}",
     "host": "https://naturalatlas-node-binary.s3-us-west-2.amazonaws.com",
-    "remote_path": "./{module_name}/v{version}/{configuration}/",
+    "remote_path": "./{module_name}/v{version}/{toolset}/",
     "package_name": "{platform}-{arch}-napi-v{napi_build_version}.tar.gz",
     "napi_versions": [
       3
