@@ -12,7 +12,7 @@ Bindings to [Mapnik](http://mapnik.org) for [node](http://nodejs.org).
 Render a map from a stylesheet:
 
 ```js
-var mapnik = require('mapnik');
+var mapnik = require('@naturalatlas/mapnik');
 var fs = require('fs');
 
 // register fonts and datasource plugins
@@ -40,14 +40,14 @@ map.load('./test/stylesheet.xml', function(err,map) {
 Convert a jpeg image to a png:
 
 ```js
-var mapnik = require('mapnik');
+var mapnik = require('@naturalatlas/mapnik');
 new mapnik.Image.open('input.jpg').save('output.png');
 ```
 
 Convert a shapefile to GeoJSON:
 
 ```js
-var mapnik = require('mapnik');
+var mapnik = require('@naturalatlas/mapnik');
 mapnik.register_datasource(path.join(mapnik.settings.paths.input_plugins,'shape.input'));
 var ds = new mapnik.Datasource({type:'shape',file:'test/data/world_merc.shp'});
 var featureset = ds.featureset()
