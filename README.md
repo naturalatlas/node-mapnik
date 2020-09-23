@@ -2,7 +2,7 @@
 
 Bindings to [Mapnik](http://mapnik.org) for [node](http://nodejs.org).
 
-[![NPM](https://badge.fury.io/js/%40naturalatlas%2Fhummus.svg)](https://www.npmjs.com/package/@naturalatlas/mapnik)
+[![NPM](https://badge.fury.io/js/%40naturalatlas%2Fmapnik.svg)](https://www.npmjs.com/package/@naturalatlas/mapnik)
 
 [![Build Status](https://secure.travis-ci.org/naturalatlas/node-mapnik.png)](https://travis-ci.org/naturalatlas/node-mapnik)
 [![Coverage Status](https://coveralls.io/repos/naturalatlas/node-mapnik/badge.svg)](https://coveralls.io/r/naturalatlas/node-mapnik)
