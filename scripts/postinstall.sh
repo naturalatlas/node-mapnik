@@ -2,7 +2,7 @@
 set -eu
 set -o pipefail
 
-MODULE_PATH=./lib/binding
+MODULE_PATH=$1
 MAPNIK_SDK=./mason_packages/.link
 
 # Check if we are using Mason's mapnik

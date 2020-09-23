@@ -1,7 +1,8 @@
 {
-  "name": "mapnik",
+  "name": "@naturalatlas/mapnik",
+  "private": false,
   "description": "Tile rendering library for node",
-  "url": "http://github.com/mapnik/node-mapnik",
+  "url": "http://github.com/naturalatlas/node-mapnik",
   "homepage": "http://mapnik.org",
   "author": "Dane Springmeyer <dane@mapbox.com> (mapnik.org)",
   "version": "4.5.2",
@@ -9,10 +10,13 @@
   "main": "./lib/mapnik.js",
   "binary": {
     "module_name": "mapnik",
-    "module_path": "./lib/binding/",
-    "host": "https://mapbox-node-binary.s3.amazonaws.com",
-    "remote_path": "./{name}/v{version}/{configuration}/{toolset}/",
-    "package_name": "{platform}-{arch}.tar.gz"
+    "module_path": "./lib/binding/{node_napi_label}",
+    "host": "https://naturalatlas-node-binary.s3-us-west-2.amazonaws.com",
+    "remote_path": "./{module_name}/v{version}/{configuration}/",
+    "package_name": "{platform}-{arch}-napi-v{napi_build_version}.tar.gz",
+    "napi_versions": [
+      3
+    ]
   },
   "bugs": {
     "email": "dane@mapbox.com",
@@ -37,7 +41,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "mapnik-vector-tile": "3.0.1",
-    "node-addon-api": "~3.0.1",
+    "node-addon-api": "*",
     "node-pre-gyp": "~0.13.0"
   },
   "bin": {
@@ -50,6 +54,9 @@
     "test": "tape test/*.test.js",
     "install": "node-pre-gyp install --fallback-to-build",
     "docs": "documentation build src/*.cpp src/mapnik_plugins.hpp --polyglot -o documentation -f html --github --name Mapnik"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
     "@mapbox/sphericalmercator": "~1.0.2",
