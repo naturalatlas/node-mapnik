@@ -2,6 +2,7 @@
   'includes': [ 'common.gypi' ],
   'variables': {
       'ENABLE_GLIBC_WORKAROUND%':'false', # can be overriden by a command line variable because of the % sign
+      'napi_build_version%':'3', # can be overriden by a command line variable because of the % sign
       'enable_sse%':'true'
   },
   'targets': [
@@ -79,10 +80,17 @@
         "<!(node -e \"require('mapnik-vector-tile')\")"
       ],
       'defines': [
+          'NAPI_VERSION=<(napi_build_version)',
           'MAPNIK_GIT_REVISION="<!@(mapnik-config --git-describe)"',
           'MAPNIK_VECTOR_TILE_LIBRARY=1',
       ],
       'conditions': [
+        ['OS=="mac"', {
+          'cflags+': ['-fvisibility=hidden'],
+          'xcode_settings': {
+            'GCC_SYMBOLS_PRIVATE_EXTERN': 'YES', # -fvisibility=hidden
+           }
+        }],
         ['ENABLE_GLIBC_WORKAROUND != "false"', {
             'sources': [
               "src/glibc_workaround.cpp"
@@ -164,8 +172,8 @@
               {
                 'action_name': 'postinstall',
                 'inputs': ['./scripts/postinstall.sh'],
-                'outputs': ['./lib/binding/mapnik'],
-                'action': ['./scripts/postinstall.sh']
+                'outputs': ['./lib/binding'],
+                'action': ['./scripts/postinstall.sh', '<(module_path)']
               }
             ]
           }

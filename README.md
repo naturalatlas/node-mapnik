@@ -2,10 +2,10 @@
 
 Bindings to [Mapnik](http://mapnik.org) for [node](http://nodejs.org).
 
-[![NPM](https://nodei.co/npm/mapnik.png?downloads=true&downloadRank=true)](https://nodei.co/npm/mapnik/)
+[![NPM](https://badge.fury.io/js/%40naturalatlas%2Fhummus.svg)](https://www.npmjs.com/package/@naturalatlas/mapnik)
 
-[![Build Status](https://secure.travis-ci.org/mapnik/node-mapnik.png)](https://travis-ci.org/mapnik/node-mapnik)
-[![Coverage Status](https://coveralls.io/repos/mapnik/node-mapnik/badge.svg)](https://coveralls.io/r/mapnik/node-mapnik)
+[![Build Status](https://secure.travis-ci.org/naturalatlas/node-mapnik.png)](https://travis-ci.org/naturalatlas/node-mapnik)
+[![Coverage Status](https://coveralls.io/repos/naturalatlas/node-mapnik/badge.svg)](https://coveralls.io/r/naturalatlas/node-mapnik)
 
 ## Usage
 
@@ -172,11 +172,11 @@ And you need to have the `mapnik-config` program is available and on your `${PAT
 Then run (within the cloned `node-mapnik` directory:
 
     make release_base
-    
+
 or
-    
+
     make debug_base
-    
+
 for release and debug builds, respectively.
 
 #### Note on SSE:
@@ -201,7 +201,7 @@ To require node-mapnik as a dependency of another package put in your package.js
 ## Tests
 
 To run the tests do:
-  
+
     npm test
 
 ## License
