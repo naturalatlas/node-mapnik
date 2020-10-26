@@ -58,7 +58,8 @@ function run() {
       local mason_release=${2}
       if [[ ! -d ${install_dir} ]]; then
           mkdir -p ${install_dir}
-          curl -sSfL https://github.com/mapbox/mason/archive/${mason_release}.tar.gz | tar --gunzip --extract --strip-components=1 --directory=${install_dir}
+          # curl -sSfL https://github.com/mapbox/mason/archive/${mason_release}.tar.gz | tar --gunzip --extract --strip-components=1 --directory=${install_dir}
+          curl -sSfL https://github.com/naturalatlas/mason-naturalatlas/archive/master.tar.gz | tar --gunzip --extract --strip-components=1 --directory=${install_dir}
       fi
     }
 
