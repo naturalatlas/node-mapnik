@@ -1,8 +1,11 @@
 language: node_js
 
 install:
+  - echo $CC
+  - echo $CXX
   # set up the environment by installing mason and clang++
   - ./scripts/setup.sh --config local.env
+  - cat local.env
   # put mason and clang++ on PATH
   - source local.env
   - node -v

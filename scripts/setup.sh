@@ -70,6 +70,7 @@ function run() {
     #
 
     echo "export PATH=${llvm_toolchain}/bin:$(pwd)/.mason:$(pwd)/mason_packages/.link/bin:"'${PATH}' > ${config}
+    echo "export CC=${llvm_toolchain}/bin/clang" >> ${config}
     echo "export CXX=${llvm_toolchain}/bin/clang++" >> ${config}
     echo "export MASON_RELEASE=${MASON_RELEASE}" >> ${config}
     echo "export MASON_LLVM_RELEASE=${MASON_LLVM_RELEASE}" >> ${config}
