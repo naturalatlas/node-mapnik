@@ -5,7 +5,7 @@
   "url": "http://github.com/naturalatlas/node-mapnik",
   "homepage": "http://mapnik.org",
   "author": "Dane Springmeyer <dane@mapbox.com> (mapnik.org)",
-  "version": "4.5.4",
+  "version": "4.6.0",
   "mapnik_version": "a77304434",
   "main": "./lib/mapnik.js",
   "binary": {
