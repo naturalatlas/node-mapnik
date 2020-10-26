@@ -55,15 +55,15 @@
         "src/mapnik_vector_tile_clear.cpp",
         "src/mapnik_vector_tile_image.cpp",
         "src/mapnik_vector_tile_composite.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_compression.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_datasource_pbf.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_featureset_pbf.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_geometry_decoder.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_geometry_encoder_pbf.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_layer.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_processor.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_raster_clipper.cpp",
-        "node_modules/@naturalatlas/mapnik-vector-tile/src/vector_tile_tile.cpp"
+        "node_modules/mapnik-vector-tile/src/vector_tile_compression.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_datasource_pbf.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_featureset_pbf.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_geometry_decoder.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_geometry_encoder_pbf.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_layer.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_processor.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_raster_clipper.cpp",
+        "node_modules/mapnik-vector-tile/src/vector_tile_tile.cpp"
       ],
       'include_dirs': [
         './mason_packages/.link/include/',
@@ -77,7 +77,7 @@
         "./deps/geometry/include/",
         "./deps/protozero/include/",
         "./deps/wagyu/include/",
-        "<!(node -e \"require('@naturalatlas/mapnik-vector-tile')\")"
+        "<!(node -e \"require('mapnik-vector-tile')\")"
       ],
       'defines': [
           'NAPI_VERSION=<(napi_build_version)',
