@@ -40,7 +40,7 @@
   ],
   "license": "BSD-3-Clause",
   "dependencies": {
-    "mapnik-vector-tile": "3.0.1",
+    "@naturalatlas/mapnik-vector-tile": "3.0.2",
     "node-addon-api": "*",
     "node-pre-gyp": "~0.13.0"
   },
