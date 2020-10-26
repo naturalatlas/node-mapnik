@@ -8,7 +8,7 @@
 #include <mapnik/layer.hpp>
 #include <mapnik/feature_factory.hpp>
 #include <mapnik/datasource_cache.hpp>
-#include <mapnik/geometry/box2d.hpp>
+#include <mapnik/box2d.hpp>
 #include <mapnik/feature.hpp>
 #include <mapnik/featureset.hpp>
 #include <mapnik/memory_datasource.hpp>
